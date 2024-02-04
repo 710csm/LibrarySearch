@@ -7,6 +7,7 @@
 
 import UIKit
 
+import BaseKit
 import CoreKit
 import LaunchKit
 import RxSwift

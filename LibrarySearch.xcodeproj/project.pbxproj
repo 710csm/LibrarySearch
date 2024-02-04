@@ -33,6 +33,7 @@
 		029D61A22B6F8A9800AE911F /* LibraryKitImp in Frameworks */ = {isa = PBXBuildFile; productRef = 029D61A12B6F8A9800AE911F /* LibraryKitImp */; };
 		029D61A42B6F8ABF00AE911F /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 029D61A32B6F8ABF00AE911F /* Networking */; };
 		029D61A62B6F8ABF00AE911F /* NetworkingImp in Frameworks */ = {isa = PBXBuildFile; productRef = 029D61A52B6F8ABF00AE911F /* NetworkingImp */; };
+		029F08252B6FE6790010CB82 /* BaseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 029F08242B6FE6790010CB82 /* BaseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		029D61842B6F891300AE911F /* Container+Coordinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Container+Coordinators.swift"; sourceTree = "<group>"; };
 		029D61862B6F891300AE911F /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		029D61872B6F891300AE911F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		029F08232B6FE5180010CB82 /* BaseKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BaseKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029F08252B6FE6790010CB82 /* BaseKit in Frameworks */,
 				029D619C2B6F8A7700AE911F /* LibraryKit in Frameworks */,
 				029D619A2B6F8A7700AE911F /* LaunchKit in Frameworks */,
 				029D61A22B6F8A9800AE911F /* LibraryKitImp in Frameworks */,
@@ -173,6 +176,7 @@
 		029D61742B6F88F300AE911F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				029F08232B6FE5180010CB82 /* BaseKit */,
 				029D61762B6F88F300AE911F /* LaunchKit */,
 				029D61752B6F88F300AE911F /* LibraryKit */,
 				029D61772B6F88F300AE911F /* WebViewKit */,
@@ -243,6 +247,7 @@
 				029D61A12B6F8A9800AE911F /* LibraryKitImp */,
 				029D61A32B6F8ABF00AE911F /* Networking */,
 				029D61A52B6F8ABF00AE911F /* NetworkingImp */,
+				029F08242B6FE6790010CB82 /* BaseKit */,
 			);
 			productName = LibrarySearch;
 			productReference = 029D61382B6F88BA00AE911F /* LibrarySearch.app */;
@@ -752,6 +757,10 @@
 		029D61A52B6F8ABF00AE911F /* NetworkingImp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkingImp;
+		};
+		029F08242B6FE6790010CB82 /* BaseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BaseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

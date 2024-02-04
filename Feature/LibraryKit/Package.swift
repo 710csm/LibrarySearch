@@ -17,6 +17,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(path: "./BaseKit"),
         .package(path: "./CoreKit"),
         .package(path: "./WebViewKit"),
         .package(path: "./Networking"),
@@ -25,6 +26,7 @@ let package = Package(
         .target(
             name: "LibraryKit",
             dependencies: [
+                .product(name: "BaseKit", package: "BaseKit"),
                 .product(name: "CoreKit", package: "CoreKit"),
             ]
         ),
@@ -32,6 +34,7 @@ let package = Package(
             name: "LibraryKitImp",
             dependencies: [
                 "LibraryKit",
+                .product(name: "BaseKit", package: "BaseKit"),
                 .product(name: "CoreKit", package: "CoreKit"),
                 .product(name: "WebViewKit", package: "WebViewKit"),
                 .product(name: "WebViewKitImp", package: "WebViewKit"),

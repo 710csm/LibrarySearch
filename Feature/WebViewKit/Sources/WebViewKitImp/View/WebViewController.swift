@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 
+import BaseKit
 import CoreKit
 import RxSwift
 import WebViewKit

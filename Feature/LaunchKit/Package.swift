@@ -17,19 +17,22 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(path: "./BaseKit"),
         .package(path: "./CoreKit"),
     ],
     targets: [
         .target(
             name: "LaunchKit",
             dependencies: [
-                .product(name: "CoreKit", package: "CoreKit"),
+                .product(name: "BaseKit", package: "BaseKit"),
+                .product(name: "CoreKit", package: "CoreKit"),                
             ]
         ),
         .target(
             name: "LaunchKitImp",
             dependencies: [
                 "LaunchKit",
+                .product(name: "BaseKit", package: "BaseKit"),
                 .product(name: "CoreKit", package: "CoreKit"),
             ]
         ),

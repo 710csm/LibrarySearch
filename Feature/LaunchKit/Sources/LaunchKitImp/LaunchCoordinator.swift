@@ -7,6 +7,7 @@
 
 import Foundation
 
+import BaseKit
 import LaunchKit
 import RxSwift
 import RxCocoa

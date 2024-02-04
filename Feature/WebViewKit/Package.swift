@@ -17,12 +17,14 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(path: "./BaseKit"),
         .package(path: "./CoreKit"),
     ],
     targets: [
         .target(
             name: "WebViewKit",
             dependencies: [
+                .product(name: "BaseKit", package: "BaseKit"),
                 .product(name: "CoreKit", package: "CoreKit"),
             ]
         ),
@@ -30,6 +32,7 @@ let package = Package(
             name: "WebViewKitImp",
             dependencies: [
                 "WebViewKit",
+                .product(name: "BaseKit", package: "BaseKit"),
                 .product(name: "CoreKit", package: "CoreKit"),
             ]
         ),
