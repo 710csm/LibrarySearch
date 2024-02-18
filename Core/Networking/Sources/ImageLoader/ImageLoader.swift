@@ -28,12 +28,13 @@ public final actor ImageDownloader {
     
     public func image(from urlPath: String) async throws -> UIImage? {
         guard let url = URL(string: urlPath) else {
-            
+            Log.error("image url is nil")
             return nil
         }
         
         // 캐시된 이미지가 있으면 리턴
         if let cached = cache[url] {
+            Log.info("cached image return")
             return cached
         }
         
@@ -43,6 +44,7 @@ public final actor ImageDownloader {
         // thumbnail 이미지를 캐싱해주도록 변경.
         // 이전에는 캐싱된 이미지는 그대로. 캐싱되지 않은 이미지는 thumbnail 로 변경해서 반환.(캐싱되지 않은 경우만 thumbnail 로 변경)
         guard let thumbnailImage = await image?.thumbnail else {
+            Log.error("thumbnail image is nil")
             return nil
         }
         

@@ -8,6 +8,7 @@
 import UIKit
 
 import DesignSystem
+import Util
 
 public struct ImageLoaderWrapper<Base> {
     public let base: Base
@@ -40,6 +41,7 @@ public extension ImageLoaderWrapper where Base: UIImageView {
                 in: Bundle.feature,
                 compatibleWith: nil
             )
+            Log.error("invalid url error")
             return
         }
         

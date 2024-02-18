@@ -23,6 +23,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         AppDelegate.container.registerDependencies()
+        Log.setupLoggerConfiguration()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

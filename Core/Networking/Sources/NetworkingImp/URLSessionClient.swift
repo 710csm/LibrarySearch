@@ -17,6 +17,7 @@ public struct URLSessionClient: HTTPClient {
     /// URLRequest를 받아 API 통신 후 제네릭 타입의 Observable response를 리턴
     public func perform<T: Decodable>(_ request: URLRequest) -> Observable<NetworkingResponse<T>> {
         return URLSession.shared.rx.data(request: request)
+            .debug()
             .retry(3)
             .observe(on: MainScheduler.asyncInstance)
             .map { result -> NetworkingResponse<T> in

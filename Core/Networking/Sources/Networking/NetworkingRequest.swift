@@ -7,6 +7,8 @@
 
 import Foundation
 
+import Util
+
 public enum HTTPMethod: String {
     case GET
     case POST
@@ -42,7 +44,7 @@ public extension NetworkingRequest {
         }
         
         guard let url = urlComponents?.url else {
-            fatalError("invalid url error")
+            Log.error("invalid url error")
         }
         
         // URLComponents로 설정한 URL로 URLRequest를 생성
